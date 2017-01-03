@@ -1,3 +1,5 @@
+(function(exports) {
+
 function Note(text) {
   this._text = text
 };
@@ -5,3 +7,6 @@ function Note(text) {
 Note.prototype.returnText = function() {
   return this._text
 };
+
+  exports.Note = Note;
+})(this);

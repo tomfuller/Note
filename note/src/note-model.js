@@ -1,3 +1,5 @@
+'use strict';
+
 (function(exports) {
 
   function Note(text) {
@@ -7,5 +9,7 @@
   Note.prototype.readNote = function() {
     return this._text;
   };
+
   exports.Note = Note;
+
 })(this);

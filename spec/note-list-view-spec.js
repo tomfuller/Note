@@ -5,7 +5,7 @@
 })();
 
 (function() {
-  var noteList = ['a'];
+  var noteList = ["a"];
   var noteListView = new NoteListView(noteList);
   assert.isTrue(noteListView.returnHTML() === '<ul><li><div>a</div></li></ul>');
 })();

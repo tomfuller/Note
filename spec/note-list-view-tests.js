@@ -1,21 +1,24 @@
 function noteListViewExists() {
-  var noteListView = new NoteListView(NoteList());
+  var noteListView = new NoteListView();
   assert.isTrue(noteListView);
 };
 
 function noteListExistsInView() {
-  var noteListView = new NoteListView(NoteList());
+  var noteList = new NoteList()
+  var noteListView = new NoteListView(noteList);
   assert.isTrue(noteListView.noteList);
 };
 
 function htmlStringOneNote() {
-  var noteListView = new NoteListView(NoteList());
+  var noteList = new NoteList()
+  var noteListView = new NoteListView(noteList);
   noteListView.noteList.createNote('Chris is slightly better at Javascript');
   assert.isTrue(noteListView.htmlString() === "<ul><li><div>Chris is slightly better at Javascript</div></li></ul>");
 };
 
 function htmlStringMultipleNotes() {
-  var noteListView = new NoteListView(NoteList());
+  var noteList = new NoteList()
+  var noteListView = new NoteListView(noteList);
   noteListView.noteList.createNote('Chris is slightly better at Javascript');
   noteListView.noteList.createNote('Tom is also slightly better at Javascript');
   noteListView.noteList.createNote('Chris spotted the text');
@@ -23,7 +26,8 @@ function htmlStringMultipleNotes() {
 };
 
 function htmlStringZeroNotes() {
-  var noteListView = new NoteListView(NoteList());
+  var noteList = new NoteList()
+  var noteListView = new NoteListView(noteList);
   assert.isTrue(noteListView.htmlString() === "<ul></ul>");
 };
 

@@ -1,5 +1,7 @@
-var Note = function() {};
+var Note = function(userNote) {
+  this.text = userNote;
+};
 
-Note.prototype.text = function() {
-  
+Note.prototype.showNote = function() {
+return this.text;
 }

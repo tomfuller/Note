@@ -9,6 +9,10 @@
     return this._list;
   };
 
+  NoteList.prototype.saveNote = function(note) {
+    this._list.push(note)
+  };
+
   exports.NoteList = NoteList;
 
 })(this);

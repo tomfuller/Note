@@ -6,4 +6,13 @@ function testNewListCreated() {
   console.log("This returned: " + list.seeList())
 };
 
+function testNoteIsInList() {
+  var list = new NoteList();
+  var note = new Note('yo');
+  list.saveNote(note);
+  assert.isTrue(list.seeList().length === 1)
+  console.log("This returned: " + list.seeList());
+};
+
 testNewListCreated();
+testNoteIsInList();

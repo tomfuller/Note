@@ -2,22 +2,23 @@
 
 (function(exports) {
 
-  function NoteListView() {
-    this._noteList = new NoteList();
+  function NoteListView(noteList) {
+    this._noteList = noteList;
   };
 
   NoteListView.prototype.getListOfNotes = function() {
-    return this._noteList
+    return this._noteList;
   };
 
   NoteListView.prototype.returnHTML = function() {
-    var list = this._noteList;
-    var html = "<p>";
-    var i;
-    for (i = 0; i < list.length; i++) {
-      html + list[i] + "</p>";
-      }
+    var list = this._noteList._list;
+    var output = "<p>";
+    for (var i = 0; i < list.length; i++) {
+      output += list[i].readNote();
+    }
+    return output + "</p>";
   };
+
 
   exports.NoteListView = NoteListView;
 

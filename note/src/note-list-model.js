@@ -1,7 +1,7 @@
 'use strict';
 
 (function(exports) {
-  
+
   function NoteList() {
     this._list = [];
   };
@@ -10,7 +10,8 @@
     return this._list;
   };
 
-  NoteList.prototype.saveNote = function(note) {
+  NoteList.prototype.saveNote = function(text) {
+    var note = new Note(text);
     this._list.push(note)
   };
 

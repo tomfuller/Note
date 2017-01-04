@@ -1,15 +1,26 @@
-var noteList = new NoteList();
-var noteListView;
 
-(function() {
+(function(exports) {
 
-  var NoteController = function(noteList) {
-  this.noteList = noteList
+  var NoteController = function() {
+  this.noteList = new NoteList()
+  console.log(this.noteList);
+  this.noteListView = new NoteListView(this.noteList)
 };
 
-  this.noteList.addNote("Note 1.");
-  noteListView = new NoteListView(this.noteList);
 
-  var app = document.getElementById("app");
-  app.innerHTML = noteListView.returnHTML();
-})();
+  NoteController.prototype.createNote = function(note) {
+    return this.noteList.addNote(note);
+  }
+
+  NoteController.prototype.updateHTML = function() {
+    var app = document.getElementById("app");
+    app.innerHTML = this.noteListView.returnHTML();
+  }
+
+  exports.NoteController = NoteController;
+
+})(this);
+
+var notecontroller = new NoteController()
+notecontroller.createNote("Second Note")
+notecontroller.updateHTML()

@@ -2,7 +2,8 @@
 
 function testNewNoteCreated() {
   var note = new Note('hi!');
+  console.log("TEST: testNewNoteCreated")
   assert.isTrue( note.readNote() === 'hi!')
-  console.log("This returned: " + note.readNote())
 };
+
 testNewNoteCreated();

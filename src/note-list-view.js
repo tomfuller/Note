@@ -6,7 +6,7 @@ var NoteListView = function(noteList) {
 NoteListView.prototype.returnHTML = function() {
   var messages = [];
   for (i = 0; i < this.allNotes.length; i++) {
-    messages.push(this.allNotes[i].text)
+    messages.push(this.allNotes[i].text.substring(0,20))
   }
 
   return `<ul><li><div>${messages.join('</div></li><li><div>')}</div></li></ul>`;

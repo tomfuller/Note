@@ -3,10 +3,10 @@ var NoteListView = function(noteList) {
 };
 
 NoteListView.prototype.returnHTML = function() {
-    var messages = [];
-    for (i = 0; i < this.allNotes.length; i++) {
-  	messages.push(this.allNotes[i].text)
-    }
-    console.log(messages);
+  var messages = [];
+  for (i = 0; i < this.allNotes.length; i++) {
+    messages.push(this.allNotes[i].text)
+  }
+
   return `<ul><li><div>${messages.join('</div></li><li><div>')}</div></li></ul>`;
 }

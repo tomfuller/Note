@@ -1,10 +1,15 @@
-var noteList;
+var noteList = new NoteList();
 var noteListView;
 
 (function() {
-  noteList = new NoteList();
-  noteList.addNote("This is a note.");
-  noteListView = new NoteListView(noteList);
+
+  var NoteController = function(noteList) {
+  this.noteList = noteList
+};
+
+  this.noteList.addNote("Note 1.");
+  noteListView = new NoteListView(this.noteList);
+
   var app = document.getElementById("app");
   app.innerHTML = noteListView.returnHTML();
 })();

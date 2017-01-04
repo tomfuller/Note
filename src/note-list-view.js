@@ -1,3 +1,4 @@
+(function(exports) {
 var NoteListView = function(noteList) {
   this.allNotes = noteList.showNotes();
 };
@@ -10,3 +11,5 @@ NoteListView.prototype.returnHTML = function() {
 
   return `<ul><li><div>${messages.join('</div></li><li><div>')}</div></li></ul>`;
 }
+exports.NoteListView = NoteListView;
+})(this);

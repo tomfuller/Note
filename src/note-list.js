@@ -8,8 +8,9 @@ NoteList.prototype.showNotes = function() {
 };
 
 NoteList.prototype.addNote = function(message) {
-  this.notes.push(new Note(message));
-}
+  var idNumber = this.notes.length;
+  this.notes.push(new Note(message, idNumber));
+};
 
 exports.NoteList = NoteList;
 })(this);

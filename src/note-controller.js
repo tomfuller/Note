@@ -3,7 +3,6 @@
 
   var NoteController = function() {
   this.noteList = new NoteList()
-  console.log(this.noteList);
   this.noteListView = new NoteListView(this.noteList)
 };
 

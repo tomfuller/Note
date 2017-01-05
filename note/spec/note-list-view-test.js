@@ -15,10 +15,10 @@ function testNoteListViewTakesNoteListModel() {
 
 function testNoteListViewReturnsHTML() {
   var noteList = new NoteList();
-  noteList.addNote("this is a string");
+  noteList.addNote("this is a long long long long string");
   var listView = new NoteListView(noteList);
   console.log("TEST:testNoteListViewReturnsHTML");
-  assert.isTrue(listView.returnNoteListHTML() === "<ul><li><div>this is a string</div></li></ul>");
+  assert.isTrue(listView.returnNoteListHTML() === "<ul><li><div>this is a long long ");
 };
 
 testNewNoteListViewCreated();

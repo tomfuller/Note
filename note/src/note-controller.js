@@ -3,14 +3,16 @@
 (function(exports) {
 
   function NoteController() {
-    this.noteList = new NoteList();
-    this.noteListView = new NoteListView(this.noteList)
+    this.list = new NoteList();
+    this.list.addNote("favorite drink: seltzer");
+    this.noteListView = new NoteListView(this.list);
   };
 
   NoteController.prototype.getHTML = function() {
    var app = document.getElementById("app");
    console.log(app);
-   app.innerHTML = noteListView.returnHTML();
+   console.log(this.noteListView.returnHTML());
+   app.innerHTML = this.noteListView.returnHTML();
  };
 
   exports.NoteController = NoteController;

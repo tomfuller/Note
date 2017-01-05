@@ -16,7 +16,8 @@
     for (var i = 0; i < list.length; i++) {
       output +=  "<li><div>" + list[i].readNote() + "</div></li>"
     }
-      return output + "</ul>";
+      output += "</ul>";
+      return output;
   };
 
   exports.NoteListView = NoteListView;

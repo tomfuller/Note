@@ -15,7 +15,7 @@ function testNoteListViewTakesNoteListModel() {
 
 function testNoteListViewReturnsHTML() {
   var noteList = new NoteList();
-  noteList.newNote("this is a string");
+  noteList.addNote("this is a string");
   var listView = new NoteListView(noteList);
   console.log("TEST:testNoteListViewReturnsHTML");
   assert.isTrue(listView.returnHTML() === "<ul><li><div>this is a string</div></li></ul>");

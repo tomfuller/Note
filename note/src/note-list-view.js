@@ -17,10 +17,10 @@
       output +=  "<li><div>" + list[i].readNote() + "</div></li>"
     }
       output += "</ul>";
-      // if(output.length > 20) {
-      //   output = output.substring(0,20);
-      //   console.log(output.substring(0,20))
-      // };
+      if(output.length > 33) {
+        output = output.substring(0,33);
+        console.log(output.substring(0,33))
+      };
       return output;
   };
 

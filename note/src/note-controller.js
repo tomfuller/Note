@@ -8,10 +8,10 @@
     this.noteListView = new NoteListView(this.list);
   };
 
-  NoteController.prototype.getHTML = function() {
+  NoteController.prototype.getNoteListHTML = function() {
    var app = document.getElementById("app");
-   console.log(this.noteListView.returnHTML());
-   app.innerHTML = this.noteListView.returnHTML();
+   console.log(this.noteListView.returnNoteListHTML());
+   app.innerHTML = this.noteListView.returnNoteListHTML();
  };
 
   exports.NoteController = NoteController;

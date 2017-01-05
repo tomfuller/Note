@@ -10,7 +10,7 @@
     return this._noteList;
   };
 
-  NoteListView.prototype.returnHTML = function() {
+  NoteListView.prototype.returnNoteListHTML = function() {
     var list = this._noteList._list;
     var output = "<ul>";
     for (var i = 0; i < list.length; i++) {

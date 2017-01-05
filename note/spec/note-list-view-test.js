@@ -18,7 +18,7 @@ function testNoteListViewReturnsHTML() {
   noteList.addNote("this is a string");
   var listView = new NoteListView(noteList);
   console.log("TEST:testNoteListViewReturnsHTML");
-  assert.isTrue(listView.returnHTML() === "<ul><li><div>this is a string</div></li></ul>");
+  assert.isTrue(listView.returnNoteListHTML() === "<ul><li><div>this is a string</div></li></ul>");
 };
 
 testNewNoteListViewCreated();

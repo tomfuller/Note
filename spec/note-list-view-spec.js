@@ -1,7 +1,7 @@
 (function() {
   var noteList = new NoteList();
   var noteListView = new NoteListView(noteList);
-  assert.isTrue(noteListView.returnHTML() === '<ul><li><div></div></li></ul>')
+  assert.isTrue(noteListView.returnHTML() === '<ul></ul>')
 })();
 
 (function() {

@@ -14,5 +14,13 @@ function testNoteIsInList() {
   assert.isTrue(list.seeList().length === 1)
 };
 
+function testNewNoteHasId() {
+  var noteList = new NoteList();
+  noteList.addNote("Note with an id")
+  console.log("TEST: testNewNoteHasId")
+  assert.isTrue ( noteList._list[0].noteId === 0 );
+};
+
 testNewListCreated();
 testNoteIsInList();
+testNewNoteHasId();

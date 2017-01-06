@@ -10,7 +10,6 @@
 
   NoteController.prototype.getNoteListHTML = function() {
    var app = document.getElementById("app");
-   console.log(this.noteListView.returnNoteListHTML());
    app.innerHTML = this.noteListView.returnNoteListHTML();
  };
 

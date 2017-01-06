@@ -14,13 +14,12 @@
     var list = this._noteList._list;
     var output = "<ul>";
     for (var i = 0; i < list.length; i++) {
-      output +=  "<li><div>" + list[i].readNote() + "</div></li>"
+      var shortString = list[i].readNote().substring(0, 20);
+      var showIdHTML = list[i].noteId;
+      console.log(showIdHTML);
+      output +=  "<li><div><a href=#" + showIdHTML + ">" + shortString + "</a></div></li>"
     }
       output += "</ul>";
-      if(output.length > 33) {
-        output = output.substring(0,33);
-        console.log(output.substring(0,33))
-      };
       return output;
   };
 

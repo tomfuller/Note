@@ -2,8 +2,9 @@
 
 (function(exports) {
 
-  function Note(text) {
+  function Note(text, id) {
     this._text = text;
+    this.noteId = id;
   };
 
   Note.prototype.readNote = function() {

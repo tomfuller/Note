@@ -1,7 +1,5 @@
 var controller = new NoteController();
 
-(function makeUrlChangeShowNoteForCurrentPage() {
-        window.addEventListener("hashchange", controller.showNoteForCurrentPage);
-      })();
 
+controller.makeUrlChangeShowNoteForCurrentPage();
 controller.getNoteListHTML();

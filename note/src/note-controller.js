@@ -20,16 +20,16 @@
  NoteController.prototype.showNoteFromURL = function(location) {
     var id = location.hash.split("#")[1];
     var note = this.list._list.find(function(note){return note.noteId.toString() === id})
-    console.log(note)
     return note
  };
 
-
-
  NoteController.prototype.showNote = function(note) {
-
    document.getElementById("app").innerHTML = note._text;
  };
+
+ NoteController.prototype.makeUrlChangeShowNoteForCurrentPage = function() {
+   window.addEventListener("hashchange", this.showNoteForCurrentPage.bind(this));
+};
 
 
 

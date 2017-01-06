@@ -16,7 +16,6 @@
     for (var i = 0; i < list.length; i++) {
       var shortString = list[i].readNote().substring(0, 20);
       var showIdHTML = list[i].noteId;
-      console.log(showIdHTML);
       output +=  "<li><div><a href=#" + showIdHTML + ">" + shortString + "</a></div></li>"
     }
       output += "</ul>";

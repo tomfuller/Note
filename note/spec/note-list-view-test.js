@@ -19,7 +19,7 @@ function testNoteListViewReturnsHTML() {
   var listView = new NoteListView(noteList);
   console.log("TEST:testNoteListViewReturnsHTML");
   console.log(listView.returnNoteListHTML());
-  assert.isTrue(listView.returnNoteListHTML() === "<ul><li><div><a href=#0>this is a long long </a></div></li>");
+  assert.isTrue(listView.returnNoteListHTML() === "<ul><li><div><a href=#0>this is a long long </a></div></li></ul>");
 };
 
 testNewNoteListViewCreated();

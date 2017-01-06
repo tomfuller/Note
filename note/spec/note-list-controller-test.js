@@ -5,7 +5,8 @@ function testNoteOnWebPage() {
   controller.getNoteListHTML();
   var app = document.getElementById("app");
   console.log("TEST: showsNoteOnWebPageTest")
-  assert.isTrue(app.innerHTML === "<ul><li><div>favorite drink: selt</div></li></ul>");
+  console.log(app.innerHTML);
+  assert.isTrue(app.innerHTML === '<ul><li><div><a href="#0">favorite drink: selt</a></div></li></ul>');
 };
 
 testNoteOnWebPage();

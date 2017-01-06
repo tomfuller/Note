@@ -31,6 +31,15 @@
    window.addEventListener("hashchange", this.showNoteForCurrentPage.bind(this));
 };
 
+NoteController.prototype.addSubmitEventListener = function() {
+  window.addEventListener("submit", this.preventDefault);
+};
+
+NoteController.prototype.preventDefault = function(evt) {
+  console.log(evt);
+  evt.preventDefault();
+};
+
 
 
   exports.NoteController = NoteController;
